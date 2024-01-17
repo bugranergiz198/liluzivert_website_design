@@ -1,0 +1,488 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+@keyframes animate{
+    0%{
+        background-position-y: 0;
+    }
+    100%{
+        background-position-y: -480px;
+    }
+    }
+.navbar{
+    width: 100vw;
+    height: 100px;
+    background-color:#40123A;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    position: fixed;
+    z-index: 5;
+}
+.logo{
+    height: 100%;
+    width: 200px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo a{
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 1px 8px 6px black;
+    animation: two 8s infinite;
+}
+.links{
+    position: absolute;
+    right: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.subscriptionbar{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: green;
+    align-items: center;
+    justify-content:space-evenly;
+    background-color: #40123A;
+}
+.subscriptionbar i{
+    color: #5FBA56;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.followbutton{
+    color: #fff;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 1.1rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    border-radius: 5px;
+    border:1px solid #5FBA56;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.followbutton:hover{
+    color: #5FBA56;
+    border-color: white;
+    background-color: white;
+}
+.subscriptionbar i:hover{
+    color: #fff;
+}
+.links a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    margin: 0 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+}
+/* css hover effect. link: https://www.youtube.com/watch?v=ex7jGbyFgpA&t=0s*/
+
+.links a:hover{
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 30px #2196f3,0 0 40px #2196f3;
+    transition-delay: 1s;
+    
+}
+
+.links a span{
+    position: absolute;
+    display: block;
+}
+.links a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#2196f3);
+}
+.links a:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+.links a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#2196f3);
+}
+.links a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.links a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#2196f3);
+}
+.links a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.links a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#2196f3);
+}
+.links a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+.mainpart{
+    z-index: 1;
+    width: 100vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    
+}
+.backgroundwall, .backgroundwall video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover
+
+}
+.backgroundwall video{
+    opacity: 1;
+    z-index: -1;
+}
+.introduction{
+    height: 90vh;
+    width: 100vw;
+    background-color: black;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-41%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 1;
+}
+.photodiv{
+    width: 100%;
+    height: 80%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    
+}
+.topsongs{
+    height: 98%;
+    width: 100%;
+    background-color: #40123A;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.song{
+    width: 100%;
+    height: 60px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.songname{
+    width: 90.47px;
+    font-size: 16px;
+    text-align: center;
+}
+.viewingcount{
+    width: 100px;
+}
+.popularsongs{
+    width: 100%;
+}
+.albumdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.albumbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+.album{
+    height: 250px;
+    width: 190px;
+    border-radius: 3px;
+    background-color: #1b1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid rgb(31, 29, 29);
+    transition: 0.3s;
+    
+    margin: 0 20px;
+}
+.calender{
+    height: 100vh;
+    width: 100vw;
+    background-image:url(/styling/videoandphotos/concertcover.png);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:space-evenly;
+}
+.calendertitle{
+    color: #fff;
+    font-size: 3rem;
+    font-family: 'Eater', cursive;
+    transform: translate(300px,100px);
+}
+.states{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    
+    height: 400px;
+    width: 800px;
+    flex-wrap: wrap;
+    transform: translate(100px,50px);
+}
+.concertsides{
+    color: #fff;
+    text-align: center;
+    font-family: 'Shalimar', cursive;
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    width: 15%;
+    height: 75px;
+    padding: 3px;
+    transition: 0.4s;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+}
+.concertsides:hover{
+    border-color: #5FBA56;
+    
+}
+.album:hover{
+    background-color: #292626;
+}
+.album img{
+    height: 60%;
+    width: 80%;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.albumname{
+    font-family: 'Heebo', sans-serif;
+    color: #fff;
+    font-size: 15px;
+}
+.albumdate{
+    font-family: 'Archivo Narrow', sans-serif;
+    color: #918d8d;
+    font-size: 15px;
+}
+.song:hover{
+    background-color: #322931;
+}
+.song img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+.populartitle, .albumtitle{
+    font-size: 2rem;
+    font-family: 'Prompt', sans-serif;
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+}
+.albumtitle{
+    font-size: 2.5rem;
+    padding-top: 30px;
+}
+.populartitle span, .albumtitle{
+    text-shadow: 4px 6px 2px #000;
+}
+
+.photodiv img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.namediv{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%,-50%);
+    display: block;
+}
+.name{
+    font-size: 3rem;
+    letter-spacing: -1px;
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.listeners{
+    margin-left: 10px;
+    font-family: 'Heebo', sans-serif;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.mainpart2{
+    height: 90vh;
+    background-color: #40123A;
+    padding: 2rem;
+    width: 100vw;
+}
+
+.box1, .box2{
+height: 72%;
+width: 30%;
+background-color: transparent;
+border-radius: 15px;
+position: relative;
+
+}
+.box2{
+    width: 500px;  
+}
+.footer{
+    height: 150px;
+    width: 100vw;
+    background-color: #40123A;
+    display: flex;
+}
+.managerdiv, .socialmediadiv{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    
+}
+.managerdiv{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.managerpart{
+    width: 70%;
+    height: 90%;
+    background-color: #40123A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid rgb(247, 192, 51);
+}
+.managernamesurname{
+    font-size: 2rem;
+    font-family: 'Archivo Narrow', sans-serif;
+    color: #fff;
+    text-shadow: 2px 4px 1px #000;
+}
+.managernamesurname, .managerposition, .tablepart{
+    width: 75%;
+    margin: 2px 0;
+}
+.managerposition{
+    font-size: 1.1rem;
+    font-family: 'Heebo', sans-serif;
+    color: #fff;
+    text-shadow: 2px 4px 1px #000;
+}
+.tablepart{
+    font-size: 0.90rem;
+    font-family: 'Heebo', sans-serif;
+    text-shadow: 2px 4px 1px #000;
+    color: #fff;
+}
+.tablepart i{
+    color: rgb(247, 192, 51);
+}
+.socialmediadiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.socialmediadiv a{
+    margin: 0 20px;
+    padding: 4px;
+    border-radius: 5px;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    transition: 0.5s;
+}
+.socialmediadiv a:hover{
+    box-shadow: rgba(175, 126, 157, 0.4) 5px 5px, rgba(182, 59, 28, 0.3) 10px 10px, rgba(25, 230, 35, 0.2) 15px 15px, rgba(10, 6, 9, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    
+}
+.socialmediadiv i{
+    transition: 0.3s;
+    color: black;
+}
+.socialmediadiv a:hover i{
+    color: white;
+}
+@keyframes two {
+    0% {
+      transform: rotateY(0);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
